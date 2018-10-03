@@ -1,6 +1,6 @@
 ## Zenhub title to branch name online converter
 
-https://chris-myedonline.github.io/zenhub-title-to-branch-name/
+https://chris-myedonline.github.io/zenhub-title-to-branch-name-online-converter/
 
 `xxxxxxx xxxxx xxxxxxx xxxxxx#2748`
 
