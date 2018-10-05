@@ -70,12 +70,7 @@
         const connector = "-";
         var callback = [];
 
-        function convert(value, buttonIndex) {
-            if (buttonIndex) {
-                document.getElementsByClassName("button")[buttonIndex].style.backgroundColor = "rgb(221, 221, 221)";
-                document.getElementsByClassName("button")[buttonIndex].innerHTML = "Copy to clipboard";
-            }
-
+        function convert(value) {
             var output = document.getElementById("output");
             var convertedName = '';
             var rawName = value;
@@ -99,13 +94,15 @@
             }
 
             if (prefix) {
-                let oldText = document.getElementById("output").value;
-                document.getElementById("output").value = prefix + oldText;
+                let oldText = copyText.value;
+                copyText.value = prefix + oldText;
             }
 
             copyText.select();
             document.execCommand("copy");
+
             convert(document.getElementById("input").value);
+
             var button = document.getElementsByClassName("button")[buttonIndex];
             button.style.backgroundColor = "#94d072";
 
