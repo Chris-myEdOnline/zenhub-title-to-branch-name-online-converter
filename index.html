@@ -73,7 +73,7 @@
         function convert(value) {
             var output = document.getElementById("output");
             var convertedName = '';
-            var rawName = value;
+            var rawName = value.trim();
 
             if (rawName.match(ZENHUB_TITLE_PATTERN)) {
                 var peices = rawName.trim().split('#');
