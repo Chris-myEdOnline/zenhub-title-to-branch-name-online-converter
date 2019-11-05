@@ -73,12 +73,12 @@
         function convert(value) {
             var output = document.getElementById("output");
             var convertedName = '';
-            var rawName = value.trim();
+            var rawName = value;
 
             if (rawName.match(ZENHUB_TITLE_PATTERN)) {
                 var peices = rawName.trim().split('#');
                 var bit = peices.pop();
-                rawName = bit + "-" + peices.join();
+                rawName = bit + "-" + peices.join().trim();
             }
 
             convertedName = rawName.replace(SINGAL_WHITE_SPACE_PATTERN, '-');
